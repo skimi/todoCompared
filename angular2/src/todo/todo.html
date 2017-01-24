@@ -1,0 +1,5 @@
+<div
+    class="todo"
+    [ngClass]="{'active': this.todo.active, 'completed': !this.todo.active}"
+    (click)="this.click(this.todo)"
+>{{ this.todo.text }}</div>

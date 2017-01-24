@@ -1,0 +1,24 @@
+<div class="jumbotron todo-list mt-3">
+    <h1>Todos</h1>
+    <div class="form-group">
+        <input
+            #todo
+            class="form-control"
+            placeholder="Create a todo"
+            (keyup.enter)="this.todoStore.add(todo.value); todo.value = ''"
+            />
+    </div>
+    <div class="btn-group mb-3">
+        <button class="btn btn-default" (click)="this.filterTodo('all')">All</button>
+        <button class="btn btn-default" (click)="this.filterTodo('active')">Active</button>
+        <button class="btn btn-default" (click)="this.filterTodo('completed')">Completed</button>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let todo of this.todoStore.todos | todoListPipe: this.filter; let i = index">
+            <todo
+                [todo]="todo"
+                [click]="this.toggleTodo"
+            ></todo>
+        </li>
+    </ul>
+</div>
