@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "react": "webpack-dev-server --config react/webpack.config.js",
-    "angular2": "webpack-dev-server --config angular2/webpack.config.js"
+    "angular2": "webpack-dev-server --config angular2/webpack.config.js",
+    "riot": "webpack-dev-server --config riot/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,8 @@
     "html-webpack-plugin": "^2.26.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "riot": "^3.0.7",
+    "riotjs-loader": "^4.0.0",
     "rxjs": "^5.0.3",
     "style-loader": "^0.13.1",
     "typescript": "^2.1.5",

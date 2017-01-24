@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './react/src/index',
+        index: './riot/src/index',
     },
     output: {
         path: path.join(__dirname, 'build'),
@@ -14,7 +14,21 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(tag)$/,
+                exclude: /node_modules/,
+                loaders: ['babel-loader?' + JSON.stringify({
+                    presets: [
+                        [
+                            'es2015',
+                            {
+                                modules: false
+                            }
+                        ],
+                    ],
+                }), 'riotjs-loader'],
+            },
+            {
+                test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
@@ -25,7 +39,6 @@ module.exports = {
                                 modules: false
                             }
                         ],
-                        'react',
                     ],
                 }
             },
@@ -47,6 +60,9 @@ module.exports = {
         port: 8080
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            riot: 'riot'
+        }),
         new HtmlWebpackPlugin({
             title: 'Riot JS',
             template: 'riot/src/index.html'
