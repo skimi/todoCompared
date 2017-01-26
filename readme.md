@@ -40,7 +40,7 @@ Comparing JS libraries by implementing simple todo apps.
                 <ul>
                     <li>Extremely structured</li>
                     <li>Tough learning curve (a lot of internals and syntax to learn)</li>
-                    <li>Really really (too) big! (TODO: see if tree shaking really helps)</li>
+                    <li>Really really (too) big package size! (TODO: see if tree shaking really helps)</li>
                     <li>Experimental annotations that will probably never end up in official ECMAScript specs are scary</li>
                     <li>Documentation is kindof messy (may need some getting use to)</li>
                 </ul>
