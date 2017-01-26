@@ -72,7 +72,6 @@ Comparing JS libraries by implementing simple todo apps.
             <td>
                 <ul>
                     <li>Component declaration is a bit chaotic, throwing classes and variables in the global scope. It relies a lot on its internal parsing which is not obvious when you look at the code and therefore it kinda looks weird.</li>
-                    <li>Resurrected onclick, onsubmit, etc... for simplicity sake. One step forward and two steps back kind of thing.</li>
                 </ul>
             </td>
         </tr>
