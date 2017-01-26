@@ -91,3 +91,19 @@ Comparing JS libraries by implementing simple todo apps.
 
 *(1) Basically, AngularJS and React child*<br>
 *(2) It is possible using [vue-class-component](https://github.com/vuejs/vue-class-component) but it uses experimental annotations like Angular 2.*
+
+## How to use
+
+You need npm v3.
+
+```
+npm install
+```
+
+Commands:
+- **npm run angular2**
+- **npm run riot**
+- **npm run vue**
+- **npm run react**
+
+The servers run on the port 8080.
